@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:acevedo0425/pantallas0425/panel0425/widgets0425/panel_pantalla0425.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiAppHerramientas());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiAppHerramientas extends StatelessWidget {
+  const MiAppHerramientas({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
+      title: "Arellano Ferreteria 0429",
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+          useMaterial3: true),
+      home: PanelPantalla0425(),
     );
   }
 }
